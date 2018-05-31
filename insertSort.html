@@ -17,10 +17,9 @@
                 for (j = i - 1; j >= 0 && k < arr[j]; j--) {
                     //向后移动一位
                     arr[j + 1] = arr[j];
-                    console.log("第一次比较中间态：" + arr.toString());
+                    console.log("比较中间态：" + arr.toString());
                 }
                 // 插入元素
-                console.log("k" + k);
                 arr[j + 1] = k;
                 //输出中间排序的结果
                 console.log("比较最终态："+ arr.toString());
