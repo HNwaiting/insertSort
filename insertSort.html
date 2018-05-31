@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>插入排序</title>
+    <script type="text/javascript">
+        //排序方法
+        function insertionSort(arr) {
+            console.log("----------插入排序 开始----------");
+            //从第二个元素开始
+            for (var i = 1; i < arr.length; i++) {
+                // 取出待比较的元素
+                var k = arr[i];
+                console.log("k" + k);
+                // 向前找，找到比当前元素大的位置
+                var j;
+                for (j = i - 1; j >= 0 && k < arr[j]; j--) {
+                    //向后移动一位
+                    arr[j + 1] = arr[j];
+                    console.log("第一次比较中间态：" + arr.toString());
+                }
+                // 插入元素
+                console.log("k" + k);
+                arr[j + 1] = k;
+                //输出中间排序的结果
+                console.log("比较最终态："+ arr.toString());
+            }
+            console.log("----------插入排序 结束----------");
+        }
+        //测试
+        var arr = [12, 15, 9, 20, 6, 31, 24];
+        //输出
+        console.log(arr.toString());
+        insertionSort(arr);
+        console.log(arr.toString(arr));
+    </script>
+</head>
+<body>
+</body>
+</html>
